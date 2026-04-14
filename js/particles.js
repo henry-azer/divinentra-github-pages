@@ -14,16 +14,25 @@
     return window.innerWidth < 768 ? 50 : 100;
   }
 
+  var dpr = window.devicePixelRatio || 1;
+  var logicalWidth = window.innerWidth;
+  var logicalHeight = window.innerHeight;
+
   function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    logicalWidth = window.innerWidth;
+    logicalHeight = window.innerHeight;
+    canvas.width = logicalWidth * dpr;
+    canvas.height = logicalHeight * dpr;
+    canvas.style.width = logicalWidth + 'px';
+    canvas.style.height = logicalHeight + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
   function createParticle() {
     var isAccent = Math.random() < 0.1;
     return {
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+      x: Math.random() * logicalWidth,
+      y: Math.random() * logicalHeight,
       vx: (Math.random() - 0.5) * 1.0,
       vy: (Math.random() - 0.5) * 1.0,
       radius: isAccent ? 2.5 : 1.5,
@@ -46,10 +55,10 @@
     p.y += p.vy;
 
     // Wrap around edges
-    if (p.x < 0) p.x = canvas.width;
-    if (p.x > canvas.width) p.x = 0;
-    if (p.y < 0) p.y = canvas.height;
-    if (p.y > canvas.height) p.y = 0;
+    if (p.x < 0) p.x = logicalWidth;
+    if (p.x > logicalWidth) p.x = 0;
+    if (p.y < 0) p.y = logicalHeight;
+    if (p.y > logicalHeight) p.y = 0;
 
     // Mouse interaction — gentle repulsion
     if (mouse.x !== null && mouse.y !== null) {
@@ -148,7 +157,7 @@
       return;
     }
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, logicalWidth, logicalHeight);
 
     for (var i = 0; i < particles.length; i++) {
       updateParticle(particles[i]);

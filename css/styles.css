@@ -33,6 +33,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -109,10 +110,6 @@ p {
   color: var(--gray-400);
 }
 
-.text-accent {
-  color: var(--accent);
-}
-
 /* ============================================================
    LAYOUT
    ============================================================ */
@@ -180,7 +177,7 @@ p {
   z-index: 100;
   padding: 20px 0;
   transition: background 0.3s var(--ease-out), padding 0.3s var(--ease-out),
-    backdrop-filter 0.3s var(--ease-out);
+    backdrop-filter 0.3s var(--ease-out), -webkit-backdrop-filter 0.3s var(--ease-out);
 }
 
 .nav.scrolled,
@@ -368,7 +365,6 @@ p {
   background: transparent;
   color: var(--accent);
   box-shadow: 0 0 24px var(--accent-glow), 0 0 48px var(--accent-glow);
-  transform: translateY(-2px);
 }
 
 .btn--ghost {
@@ -380,7 +376,6 @@ p {
 .btn--ghost:hover {
   border-color: var(--accent);
   color: var(--accent);
-  transform: translateY(-2px);
 }
 
 .btn--large {
@@ -471,6 +466,7 @@ p {
   bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
+  transition: opacity 0.4s var(--ease-out);
   color: var(--gray-400);
   animation: bounce 2s ease-in-out infinite;
   cursor: pointer;
@@ -540,7 +536,7 @@ p {
   height: 100px;
   background: var(--accent-glow);
   border-color: var(--accent);
-  animation-duration: 0s;
+  animation: none;
   box-shadow: 0 0 30px var(--accent-glow), inset 0 0 30px var(--accent-glow);
 }
 
@@ -978,9 +974,8 @@ p {
   flex-wrap: wrap;
 }
 
-.footer__copy {
+.footer__inner p {
   font-size: 0.875rem;
-  color: var(--gray-400);
 }
 
 .footer__links {
@@ -1247,7 +1242,7 @@ p {
 .policy-content a {
   color: var(--accent);
   text-decoration: none;
-  transition: text-decoration 0.2s;
+  transition: color 0.2s;
 }
 
 .policy-content a:hover {

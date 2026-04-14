@@ -39,8 +39,8 @@
       }
     });
   }, {
-    threshold: 0.3,
-    rootMargin: '-80px 0px 0px 0px'
+    threshold: 0.15,
+    rootMargin: '-80px 0px -20% 0px'
   });
 
   sections.forEach(function (section) {
@@ -90,7 +90,7 @@
   // 2. SCROLL REVEAL — IntersectionObserver
   // ─────────────────────────────────────────────────────────────────────────────
 
-  var revealEls = document.querySelectorAll('.reveal, .reveal--left, .reveal--right, .reveal--scale');
+  var revealEls = document.querySelectorAll('.reveal');
 
   var revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -233,10 +233,10 @@
       });
 
       el.addEventListener('mouseleave', function () {
-        el.style.transition = 'transform 0.5s ease-out';
-        el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        el.style.transition = 'transform 0.5s ease-out, border-color 0.3s ease, box-shadow 0.3s ease';
+        el.style.transform = '';
         setTimeout(function () {
-          el.style.transition = 'transform 0.1s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          el.style.transition = '';
         }, 500);
       });
     });
