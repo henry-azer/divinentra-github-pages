@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divinentra &mdash; Engineering What Matters</title>
+  <meta name="description" content="Divinentra builds privacy-first software products and delivers precise, secure engineering solutions. Explore our work and get in touch." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Divinentra — Engineering What Matters" />
+  <meta property="og:description" content="We build privacy-first products and craft software solutions with precision, security, and purpose." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://divinentra.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300E5A0'/><text x='16' y='22' font-family='monospace' font-size='18' font-weight='900' text-anchor='middle' fill='black'>D</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300E5A0'/><text x='16' y='22' font-family='monospace' font-size='18' font-weight='900' text-anchor='middle' fill='black'>D</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__brand">DIVINENTRA</a>
+      <ul class="nav__links">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#products" class="nav__link">Products</a></li>
+        <li><a href="#expertise" class="nav__link">Expertise</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="#about" class="nav__mobile-link">About</a>
+    <a href="#services" class="nav__mobile-link">Services</a>
+    <a href="#products" class="nav__mobile-link">Products</a>
+    <a href="#expertise" class="nav__mobile-link">Expertise</a>
+    <a href="#contact" class="nav__mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <p class="mono-label hero__label">// DIVINENTRA</p>
+      <h1 class="hero__heading" id="typewriter"></h1>
+      <p class="hero__subtitle text-muted">We build privacy-first products and craft software solutions with precision, security, and purpose.</p>
+      <div class="hero__ctas">
+        <a href="#products" class="btn btn--primary magnetic">Explore Our Work</a>
+        <a href="#contact" class="btn btn--ghost magnetic">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" id="scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section section--dark" id="about">
+    <div class="container about">
+      <div class="about__text">
+        <span class="mono-label reveal reveal--left">// ABOUT</span>
+        <h2 class="reveal reveal--left">We Don't Just Build Software. We Build Trust.</h2>
+        <div class="reveal--stagger">
+          <p class="reveal reveal--left">We are a software engineering studio focused on building products that respect user privacy, operate offline-first, and stand the test of time. Every decision we make — from architecture to UX — is driven by purpose and precision.</p>
+          <p class="reveal reveal--left">Our work spans native mobile applications, enterprise backend services, and full-stack web platforms. We partner with teams that need deep technical expertise and care about doing things right.</p>
+          <p class="reveal reveal--left">No bloat. No shortcuts. No telemetry without consent. Just clean, deterministic software crafted with intent.</p>
+        </div>
+      </div>
+      <div class="about__visual reveal reveal--right">
+        <div class="orbit-rings">
+          <div class="orbit-ring orbit-ring--1"></div>
+          <div class="orbit-ring orbit-ring--2"></div>
+          <div class="orbit-ring orbit-ring--3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="mono-label">// SERVICES</span>
+        <h2>What We Do</h2>
+        <p>End-to-end software delivery — from architecture and design to deployment and beyond.</p>
+      </div>
+      <div class="services-grid reveal--stagger">
+        <div class="card reveal reveal--scale" data-tilt>
+          <div class="card__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 8 24 16 30"/>
+              <polyline points="32 18 40 24 32 30"/>
+              <line x1="26" y1="14" x2="22" y2="34"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Custom Development</h3>
+          <p class="card__desc">Full-cycle product development for mobile, web, and backend. We architect, build, and ship software that scales — with clean code and zero technical debt.</p>
+          <div class="card__tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">CI/CD</span>
+          </div>
+        </div>
+        <div class="card reveal reveal--scale" data-tilt>
+          <div class="card__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="14"/>
+              <line x1="24" y1="10" x2="24" y2="6"/>
+              <line x1="24" y1="42" x2="24" y2="38"/>
+              <line x1="10" y1="24" x2="6" y2="24"/>
+              <line x1="42" y1="24" x2="38" y2="24"/>
+              <circle cx="24" cy="24" r="4" fill="#00E5A0" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Consulting &amp; Strategy</h3>
+          <p class="card__desc">Technical leadership and architecture consulting for product teams. We audit existing systems, define scalable strategies, and guide engineering teams toward better decisions.</p>
+          <div class="card__tags">
+            <span class="tag">Architecture</span>
+            <span class="tag">Code Review</span>
+            <span class="tag">Tech Audits</span>
+            <span class="tag">Team Coaching</span>
+          </div>
+        </div>
+        <div class="card reveal reveal--scale" data-tilt>
+          <div class="card__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="14" r="6"/>
+              <circle cx="12" cy="36" r="6"/>
+              <circle cx="36" cy="36" r="6"/>
+              <line x1="24" y1="20" x2="15" y2="31"/>
+              <line x1="24" y1="20" x2="33" y2="31"/>
+              <line x1="18" y1="36" x2="30" y2="36"/>
+            </svg>
+          </div>
+          <h3 class="card__title">B2B Solutions</h3>
+          <p class="card__desc">Tailored integrations, white-label products, and enterprise tooling built to your specifications. We understand business logic and deliver solutions that work end-to-end.</p>
+          <div class="card__tags">
+            <span class="tag">Integrations</span>
+            <span class="tag">White-label</span>
+            <span class="tag">Keycloak</span>
+            <span class="tag">Supabase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="mono-label">// PRODUCTS</span>
+        <h2>What We've Built</h2>
+        <p>Privacy-first, offline-capable products crafted with care for real people.</p>
+      </div>
+      <div class="product-row">
+        <div class="product-row__image reveal reveal--left">
+          <div class="phone-mockup">
+            <img src="assets/screenshots/padlock/home-dark.png" alt="Padlock daily puzzle game screenshot" loading="lazy" />
+          </div>
+        </div>
+        <div class="product-row__text reveal reveal--right">
+          <span class="mono-label">Daily Puzzle &mdash; iOS &amp; Android</span>
+          <div class="product-title-row">
+            <h3>Padlock</h3>
+            <span class="pill">Daily Puzzle Game</span>
+          </div>
+          <p>A privacy-first daily number logic puzzle. Guess the hidden numeric code using color-coded feedback — no account required, no data collected, no internet needed. New puzzle every day, same code worldwide via deterministic SHA-256 seeding.</p>
+          <div class="tech-pills">
+            <span data-scramble>Flutter</span>
+            <span data-scramble>Hive</span>
+            <span data-scramble>SHA-256 Seeding</span>
+          </div>
+          <a href="https://padlock.divinentra.com" class="link-arrow" target="_blank" rel="noopener noreferrer">Play Now &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="section section--dark" id="expertise">
+    <div class="container">
+      <div class="section-header">
+        <span class="mono-label">// EXPERTISE</span>
+        <h2>Our Toolkit</h2>
+        <p>The technologies and principles we apply across every engagement.</p>
+      </div>
+
+      <!-- Orbit Constellation (desktop) -->
+      <div class="orbit-constellation reveal" id="constellation">
+        <div class="orbit-center">DIVINENTRA</div>
+
+        <div class="orbit orbit--inner">
+          <span class="orbit-node" data-tooltip="Cross-platform mobile UI">Flutter</span>
+          <span class="orbit-node" data-tooltip="JVM enterprise backend">Spring</span>
+          <span class="orbit-node" data-tooltip="Typed, performant backend">Java</span>
+          <span class="orbit-node" data-tooltip="Flutter's language">Dart</span>
+        </div>
+
+        <div class="orbit orbit--middle">
+          <span class="orbit-node" data-tooltip="Open-source BaaS">Supa</span>
+          <span class="orbit-node" data-tooltip="Identity & Access Mgmt">KC</span>
+          <span class="orbit-node" data-tooltip="Relational database">PgSQL</span>
+          <span class="orbit-node" data-tooltip="Container orchestration">Docker</span>
+        </div>
+
+        <div class="orbit orbit--outer">
+          <span class="orbit-node" data-tooltip="Version control">Git</span>
+          <span class="orbit-node" data-tooltip="Continuous Integration & Delivery">CI/CD</span>
+          <span class="orbit-node" data-tooltip="Design & prototyping">Figma</span>
+          <span class="orbit-node" data-tooltip="Backend as a Service">Firebase</span>
+        </div>
+      </div>
+
+      <!-- Tech Grid (mobile fallback) -->
+      <div class="tech-grid" id="tech-grid">
+        <span class="tech-badge">Flutter</span>
+        <span class="tech-badge">Dart</span>
+        <span class="tech-badge">Spring</span>
+        <span class="tech-badge">Java</span>
+        <span class="tech-badge">Supabase</span>
+        <span class="tech-badge">Keycloak</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">Git</span>
+        <span class="tech-badge">CI/CD</span>
+        <span class="tech-badge">Figma</span>
+        <span class="tech-badge">Firebase</span>
+      </div>
+
+      <!-- Principles -->
+      <div class="principles-grid reveal--stagger">
+        <div class="principles-col reveal reveal--left">
+          <h3>Engineering Principles</h3>
+          <ul>
+            <li><span class="dot"></span>Clean Architecture &amp; SOLID</li>
+            <li><span class="dot"></span>Test-Driven Development</li>
+            <li><span class="dot"></span>Offline-First by Default</li>
+            <li><span class="dot"></span>Deterministic &amp; Reproducible Builds</li>
+          </ul>
+        </div>
+        <div class="principles-col reveal reveal--right">
+          <h3>Security Standards</h3>
+          <ul>
+            <li><span class="dot"></span>AES-256 Encryption at Rest</li>
+            <li><span class="dot"></span>Zero-Knowledge Architecture</li>
+            <li><span class="dot"></span>Biometric Authentication</li>
+            <li><span class="dot"></span>No Telemetry, No Tracking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <span class="mono-label">// CONTACT</span>
+      <h2>Let's Build Something That Matters.</h2>
+      <p>Have a project in mind? Looking for a technical partner? We'd love to hear from you — whether you're a startup, an enterprise team, or just exploring.</p>
+      <a href="mailto:henry.azer@outlook.com" class="btn btn--primary btn--large">Start the Conversation &rarr;</a>
+      <div class="social-row">
+        <a href="https://github.com/henry-azer" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/henry-azer" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="mailto:henry.azer@outlook.com" class="social-icon" aria-label="Email">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <polyline points="22,4 12,13 2,4"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2025 Divinentra. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
