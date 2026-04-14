@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service &mdash; Divinentra</title>
+  <meta name="description" content="Terms of Service for Divinentra — the terms governing use of divinentra.com." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300E5A0'/><text x='16' y='22' font-family='monospace' font-size='18' font-weight='900' text-anchor='middle' fill='black'>D</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300E5A0'/><text x='16' y='22' font-family='monospace' font-size='18' font-weight='900' text-anchor='middle' fill='black'>D</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__brand">DIVINENTRA</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="privacy-policy.html" class="nav__link">Privacy</a></li>
+        <li><a href="terms-of-service.html" class="nav__link nav__link--active">Terms</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle-legal" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container--narrow">
+      <div class="policy-content">
+        <h1>Terms of Service</h1>
+        <p class="policy-content__date">Last Updated: April 2026</p>
+
+        <h2>1. Agreement to Terms</h2>
+        <p>By accessing or using divinentra.com (the "Site"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>Divinentra.com is an informational portfolio and landing page for Divinentra, a software engineering company. The Site provides information about our products, services, and expertise. It does not require registration or account creation.</p>
+
+        <h2>3. Intellectual Property</h2>
+        <p>All content on this Site — including text, graphics, logos, icons, and design — is the property of Divinentra and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from any content on this Site without our express written permission.</p>
+
+        <h2>4. Product References</h2>
+        <p>This Site references Divinentra products such as Padlock. Each product is a separate application governed by its own terms of service. Use of any Divinentra product is subject to that product's specific terms, not these terms.</p>
+
+        <h2>5. External Links</h2>
+        <p>This Site may contain links to third-party websites. These links are provided for convenience only. We have no control over the content or practices of third-party sites and are not responsible for any loss or damage that may arise from your use of them.</p>
+
+        <h2>6. Disclaimer of Warranties</h2>
+        <p>This Site is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components. Your use of the Site is at your own risk.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, Divinentra shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, this Site or its content, even if we have been advised of the possibility of such damages.</p>
+
+        <h2>8. Changes to These Terms</h2>
+        <p>We reserve the right to update these Terms of Service at any time. When we do, the "Last Updated" date at the top of this page will be revised. Your continued use of the Site after any changes constitutes your acceptance of the new terms.</p>
+
+        <h2>9. Governing Law</h2>
+        <p>These Terms of Service shall be governed by and construed in accordance with applicable laws. Any disputes arising under these terms shall be subject to the jurisdiction of the applicable courts.</p>
+
+        <h2>10. Contact</h2>
+        <p>If you have any questions about these Terms of Service, you can reach us at <a href="mailto:henry.azer@outlook.com">henry.azer@outlook.com</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="text-muted">&copy; 2026 Divinentra. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('nav-toggle-legal');
+      var nav = document.getElementById('nav');
+
+      var mobile = document.createElement('div');
+      mobile.className = 'nav__mobile';
+
+      var links = [
+        { text: 'Home', href: 'index.html' },
+        { text: 'Privacy', href: 'privacy-policy.html' },
+        { text: 'Terms', href: 'terms-of-service.html' }
+      ];
+
+      links.forEach(function (item) {
+        var a = document.createElement('a');
+        a.href = item.href;
+        a.className = 'nav__mobile-link';
+        a.textContent = item.text;
+        mobile.appendChild(a);
+      });
+
+      document.body.appendChild(mobile);
+
+      toggle.addEventListener('click', function () {
+        toggle.classList.toggle('nav__toggle--active');
+        mobile.classList.toggle('nav__mobile--active');
+      });
+
+      mobile.querySelectorAll('.nav__mobile-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          toggle.classList.remove('nav__toggle--active');
+          mobile.classList.remove('nav__mobile--active');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

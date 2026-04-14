@@ -183,12 +183,21 @@ p {
     backdrop-filter 0.3s var(--ease-out);
 }
 
-.nav.scrolled {
+.nav.scrolled,
+.nav--scrolled {
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav__link--active {
+  color: var(--white);
+}
+
+.nav__link--active::after {
+  transform: scaleX(1);
 }
 
 .nav__inner {
@@ -1185,4 +1194,50 @@ p {
     width: 220px;
     height: 220px;
   }
+}
+
+/* ============================================================
+   POLICY PAGES (privacy-policy, terms-of-service)
+   ============================================================ */
+.policy-content {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.policy-content h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.policy-content h2 {
+  font-size: 1.25rem;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.policy-content p,
+.policy-content li {
+  color: var(--gray-400);
+  line-height: 1.7;
+}
+
+.policy-content ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.policy-content a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.policy-content a:hover {
+  text-decoration: underline;
+}
+
+.policy-content__date {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: 24px;
 }
