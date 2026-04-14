@@ -264,15 +264,15 @@ p {
   transition: transform 0.3s var(--ease-out), opacity 0.3s;
 }
 
-.nav__toggle.active span:nth-child(1) {
+.nav__toggle--active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
 
-.nav__toggle.active span:nth-child(2) {
+.nav__toggle--active span:nth-child(2) {
   opacity: 0;
 }
 
-.nav__toggle.active span:nth-child(3) {
+.nav__toggle--active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
@@ -296,10 +296,23 @@ p {
   transition: opacity 0.3s var(--ease-out);
 }
 
-.nav__mobile.open {
+.nav__mobile--active {
   opacity: 1;
+  visibility: visible;
   pointer-events: all;
 }
+
+.nav__mobile--active .nav__mobile-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger mobile links */
+.nav__mobile--active .nav__mobile-link:nth-child(1) { transition-delay: 0.05s; }
+.nav__mobile--active .nav__mobile-link:nth-child(2) { transition-delay: 0.1s; }
+.nav__mobile--active .nav__mobile-link:nth-child(3) { transition-delay: 0.15s; }
+.nav__mobile--active .nav__mobile-link:nth-child(4) { transition-delay: 0.2s; }
+.nav__mobile--active .nav__mobile-link:nth-child(5) { transition-delay: 0.25s; }
 
 .nav__mobile-link {
   font-size: 2rem;
@@ -926,7 +939,7 @@ p {
    FOOTER
    ============================================================ */
 .footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--accent-border);
   padding: 32px 0;
 }
 
@@ -983,14 +996,18 @@ p {
   transform: scale(0.92);
 }
 
-.reveal.visible {
+.revealed {
   opacity: 1;
-  transform: none;
+  transform: translateY(0) translateX(0) scale(1);
 }
 
-.reveal--stagger .reveal {
-  transition-delay: calc(var(--i, 0) * 0.1s);
-}
+/* Stagger children */
+.reveal--stagger .reveal:nth-child(1) { transition-delay: 0s; }
+.reveal--stagger .reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal--stagger .reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal--stagger .reveal:nth-child(4) { transition-delay: 0.3s; }
+.reveal--stagger .reveal:nth-child(5) { transition-delay: 0.4s; }
+.reveal--stagger .reveal:nth-child(6) { transition-delay: 0.5s; }
 
 /* ============================================================
    TOOLTIP
