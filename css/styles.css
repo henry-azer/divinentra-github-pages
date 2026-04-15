@@ -409,7 +409,7 @@ p {
 .hero__logo {
   font-size: 1.25rem;
   font-weight: 900;
-  letter-spacing: 0.3em;
+  letter-spacing: -0.04em;
   color: var(--white);
   margin-bottom: 32px;
   position: relative;
@@ -1200,7 +1200,6 @@ p {
 
   .hero__logo {
     font-size: 0.9375rem;
-    letter-spacing: 0.25em;
     margin-bottom: 24px;
     padding-bottom: 16px;
   }
