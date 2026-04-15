@@ -406,8 +406,27 @@ p {
   margin: 0 auto;
 }
 
-.hero__label {
-  margin-bottom: 20px;
+.hero__logo {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  color: var(--white);
+  margin-bottom: 32px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.hero__logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
 }
 
 .hero__heading {
@@ -1106,6 +1125,10 @@ p {
     display: flex;
   }
 
+  .hero__logo {
+    font-size: 1.0625rem;
+  }
+
   .about {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1173,6 +1196,17 @@ p {
   .container--narrow {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .hero__logo {
+    font-size: 0.9375rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+
+  .hero__logo::after {
+    width: 32px;
   }
 
   .hero__subtitle {
